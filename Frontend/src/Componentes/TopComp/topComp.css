@@ -1,0 +1,11 @@
+.changeSortingButtontrue {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./Imgs/AZ-Sort.png')
+}
+
+.changeSortingButtonfalse {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./Imgs/19-Sort.png')
+}

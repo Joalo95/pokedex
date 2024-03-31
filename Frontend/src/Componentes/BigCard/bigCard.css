@@ -1,0 +1,616 @@
+.bigCardPokeParamsDesc {
+    color: #666666;
+    font-size: small;
+    text-align: center;
+}
+
+#bigCardDiv {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 19rem 1fr;
+    border-radius: 5px;
+}
+
+#bigCardBottomDiv {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 3rem 6rem 6rem 1fr;
+    grid-template-areas: "asd"
+        "tipos"
+        "pokeParams"
+        "desc"
+        "stats";
+    margin: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#bigCardName {
+    margin-top: 20px;
+    margin-left: 30px;
+    grid-area: nombre;
+    color: white;
+    size: 32px;
+}
+
+#bigCardTopDiv {
+    font-size: 1.5rem;
+    position: static;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-areas: "back nombre id"
+        "previous image next";
+}
+
+#bigCardArrow {
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    background-image: url("../../../images/arrow-back.svg");
+    margin-top: 25px;
+    margin-left: 50px;
+    grid-area: back;
+}
+
+#bigCardId {
+    font-size: 1rem;
+    color: white;
+    grid-area: id;
+    margin-top: 20px;
+}
+
+#bigCardPokeImg {
+    z-index: 3;
+    position: relative;
+    top: 100px;
+    margin: auto;
+    grid-area: image;
+    height: 200px;
+    width: 200px;
+}
+
+.bigCardPokeStageImg {
+    /* z-index: 2; */
+    /* display: inline; */
+    position: relative;
+    top: -150px;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+#bigCardPokeImg:hover {
+    top: 80px;
+}
+
+#bigCardTipos {
+    grid-area: tipos;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tipo {
+    color: white;
+    border-radius: 30px;
+    margin: 5px;
+    padding: 5px 20px;
+}
+
+#bigCardPokeParams {
+    grid-area: pokeParams;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "weight height abilities";
+    margin-top: 1rem;
+}
+
+#bigCardWeight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: weight;
+    grid-template-areas: "img value"
+        "weight weight";
+}
+
+#bigCardHeight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: height;
+    grid-template-areas: "img value"
+        "height height";
+}
+
+#bigCardAbilities {
+    display: grid;
+    justify-content: center;
+    grid-area: abilities;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "abilities" "text"
+}
+
+.bigCardPokeParamsSmall {
+    font-size: small;
+}
+
+#bigCardParamsHeight {
+    grid-area: height;
+}
+
+#bigCardParamsWeight {
+    grid-area: weight;
+}
+
+#bigCardDesc {
+    grid-area: desc;
+    text-align: left;
+    padding: 0px 30px;
+    font-size: 14px;
+    color: black
+}
+
+#bigCardStats {
+    display: grid;
+    grid-template-columns: 6rem 6rem 10rem;
+    text-align: right;
+    grid-area: stats;
+    grid-template-areas: "stats stats stats"
+        "nombres valores barras";
+    margin: 0 auto;
+}
+
+#bigCardStatNames {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    grid-area: nombres;
+}
+
+#bigCardStatValues {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    grid-area: valores;
+}
+
+#bigCardStatBars {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    grid-area: barras;
+}
+
+#bigCardBaseStats {
+    grid-area: stats;
+    text-align: center;
+}
+
+.bigCardPokeParamsP {
+    font-size: 0.9rem;
+    color: black;
+    text-align: left;
+    margin-bottom: 2px;
+}
+
+.bigCardContentStats {
+    display: flex;
+}
+
+.bigCardStatsLengs {
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 20px 20px 20px 20px;
+    height: 10px;
+}
+
+.bigCardStatsRest {
+    border-radius: 0px 20px 20px 0px;
+    height: 10px;
+    margin-top: 5px;
+}
+
+#bigCardHeightImage,
+#bigCardWeightImage {
+    margin-left: 40px;
+    width: 2rem;
+    height: 2rem;
+}
+
+#bigCardArrowLeft {
+    z-index: 2;
+    margin-top: 120px;
+    grid-area: next;
+    background-image: url("../../../images/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 48px;
+    left: 10px;
+    grid-area: previous;
+}
+
+#bigCardArrowRight {
+    z-index: 2;
+    margin-top: 120px;
+    grid-area: next;
+    background-image: url("../../../images/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 48px;
+    left: 35px;
+    width: 32px;
+    height: 32px;
+}
+
+#bigCardPokeBallImage {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    opacity: 0.3;
+    background-image: url("../../../images/Pokeball.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+}
+
+#bigCardParamsAbilities {
+    grid-area: text;
+}
+
+#bigcardabilities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.btnGroupBigCard {
+    overflow: hidden;
+    z-index: 50;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: center;
+    position: fixed;
+    width: 8rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.btnBigCard {
+    height: 40px;
+    margin-top: 10px;
+    background-color: rgb(240, 110, 110);
+    /* overflow: hidden; */
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    /* z-index: 50; */
+}
+
+.btnBigCard:hover {
+    background-color: rgb(76, 71, 71);
+}
+
+/* .group-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    margin-top: 2rem;
+}
+
+:root {
+    --glow-color: hsl(11, 74%, 57%);
+    --glow-color-2: hsl(186 100% 69%);
+}
+
+.glowing-btn {
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 6px 16px;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+}
+
+.glowing-btn-2 {
+    color: var(--glow-color-2);
+    cursor: pointer;
+    padding: 6px 16px;
+    border: 0.15em solid var(--glow-color-2);
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color-2),
+        0px 0px 0.5em 0px var(--glow-color-2);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color-2),
+        0px 0px 0.5em 0px var(--glow-color-2);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color-2),
+        0px 0px 0.5em 0px var(--glow-color-2);
+    animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+}
+
+.glowing-txt-2 {
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color-2);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color-2);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color-2);
+    animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+    opacity: 0.5;
+    animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color);
+    pointer-events: none;
+}
+
+.glowing-btn-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color-2);
+    pointer-events: none;
+}
+
+.glowing-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+}
+
+.glowing-btn-2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color-2);
+    box-shadow: 0 0 2em 0.2em var(--glow-color-2);
+    transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    animation: none;
+}
+
+.glowing-btn-2:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+    animation: none;
+}
+
+.glowing-btn-2:hover .glowing-txt-2 {
+    animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.glowing-btn-2:hover .faulty-letter-2 {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.glowing-btn:hover:before {
+    filter: blur(1.5em);
+    opacity: 1;
+}
+
+.glowing-btn-2:hover:before {
+    filter: blur(1.5em);
+    opacity: 1;
+}
+
+.glowing-btn:hover:after {
+    opacity: 1;
+}
+
+.glowing-btn-2:hover:after {
+    opacity: 1;
+}
+
+@keyframes faulty-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 0.1;
+    }
+
+    4% {
+        opacity: 0.5;
+    }
+
+    19% {
+        opacity: 0.5;
+    }
+
+    21% {
+        opacity: 0.1;
+    }
+
+    23% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    83% {
+        opacity: 0.4;
+    }
+
+    87% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    8% {
+        opacity: 0.1;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    72% {
+        opacity: 0.2;
+    }
+
+    77% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes border-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    4% {
+        opacity: 0.1;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
